@@ -7,7 +7,6 @@ execute_latexmk() {
     source_dir=$root_dir/src
 
     main_file=$source_dir/main.tex
-    bib_file=$source_dir/bibliography.bib
 
     export TEXINPUTS=$source_dir:$TEXINPUTS
 
@@ -23,15 +22,6 @@ execute_latexmk() {
         -interaction=nonstopmode \
         -outdir="$out_dir" \
         -synctex=1 \
-        "$main_file"
-
-    echo "Creating README..." && pandoc \
-        --from latex \
-        --to rst \
-        --bibliography "$bib_file" \
-        --biblatex \
-        --citeproc \
-        --output "README.rst" \
         "$main_file"
 
     echo "Done."
