@@ -10,13 +10,15 @@ execute_latexmk() {
 
     export TEXINPUTS=$source_dir:$TEXINPUTS
 
-    echo "Cleaning up old files..." && latexmk -c
+    echo "#01: Cleaning up old files..."
+    latexmk -c
 
-    echo "Compiling..." && latexmk \
+    echo "#02: Compiling..."
+    latexmk \
         -auxdir="$aux_dir" \
         -bibtex \
         -cd \
-        -dvi \
+        -pdf \
         -f \
         -gg \
         -interaction=nonstopmode \
@@ -24,7 +26,10 @@ execute_latexmk() {
         -synctex=1 \
         "$main_file"
 
-    echo "Done."
+    echo "#03: Copying and renaming main file output..."
+    cp "$out_dir/main.pdf" "$root_dir/estudos_matematicos.pdf"
+
+    echo "#04: Done."
 }
 
 execute_latexmk
