@@ -1,0 +1,24 @@
+\documentclass[../../main]{subfiles}
+
+\begin{document}
+    \begin{defi}[Anel]\label{defi:anel}
+        É uma estrutura algébrica que consiste em uma tripla ordenada $(A,+,\cdot)$, seja $A$ um conjunto que possui o elemento vazio $\Set{0}$ e duas operações binárias definidas em $A$, $+$ e $\cdot$ que satisfazem os seguintes axiomas:
+
+        \begin{enumerate}
+            \item \textbf{Associatividade de $+$:} $(\forall a,b,c \in A): (a+b)+c=a+(b+c)$
+
+            \item \textbf{Comutatividade de $+$:} $(\forall a,b \in A): a+b=b+a$
+
+            \item \textbf{Existência do elemento neutro de $+$:} $(\forall a \in A): \Set{I}+a=a+\Set{I}=a$
+
+            \item \textbf{Existência do elemento inverso de $+$:} $(\forall a \in A): a+a^{-1}=a^{-1}+a=\Set{I}$
+            \item \textbf{Associatividade de $\cdot$:} $(\forall a,b,c \in A): (a\cdot b)\cdot c=a\cdot (b\cdot c)$
+
+            \item \textbf{Distributividade de $\cdot$ em relação a $+$ (à esquerda e à direita):} $(\forall a,b,c \in A): a\cdot (b+c)=a\cdot b+a\cdot c$ e $(\forall a,b,c \in A): a \cdot (b+c)=a \cdot b+a \cdot c \wedge (a+b)\cdot c=a\cdot c+b\cdot c$
+        \end{enumerate}
+    \end{defi}
+
+    \begin{defi}[Anel Comutativo]\label{defi:anel-comutativo}
+        Um anel $(A,+,\cdot)$ é denominado anel comutativo se além de satisfazer os axiomas de um anel, também satisfaz o axioma de comutatividade para a operação $\cdot$, sendo $(\forall a,b \in A): a\cdot b=b\cdot a$.
+    \end{defi}
+\end{document}
