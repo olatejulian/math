@@ -27,7 +27,7 @@ execute_latexmk() {
         "$main_file"
 
     echo "#03: Copying and renaming main file output..."
-    cp "$out_dir/main.pdf" "$root_dir/estudos_matematicos.pdf"
+    cp "$out_dir/main.pdf" "$root_dir/Grimório de Matemática e Filosofia Natural.pdf"
 
     echo "#04: Done."
 }
