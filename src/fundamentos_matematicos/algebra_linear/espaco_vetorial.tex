@@ -2,18 +2,27 @@
 
 \begin{document}
     \begin{defi}[Espaço Vetorial]\label{defi:espaco-vetorial}
-        Seja $V$ um conjunto sobre o corpo $K$ é denominado espaço vetorial se é munido de de duas operações binárias, $+$ e $.$ que satisfazem os seguintes axiomas:
+        Se $V$ é dito ser um espaço vetorial sobre o corpo $K$ \ref{defi:corpo} se e somente se é munido de de duas operações binárias, $+$ e $.$ que satisfazem os seguintes axiomas:
+
 
         \begin{enumerate}
             \item \textbf{Associatividade de $+$:} $(\forall a,b,c \in V): (a+b)+c=a+(b+c)$
 
             \item \textbf{Comutatividade de $+$:} $(\forall a,b \in V): a+b=b+a$
 
-            \item \textbf{Existência do elemento neutro de $+$:} $(\forall a \in V): \Set{I}+a=a+\Set{I}=a$
+            \item \textbf{Existência do elemento neutro de $+$:} $(\forall a \in V, \exists! \Set{I} \in V): \Set{I}+a=a+\Set{I}=a$
 
-            \item \textbf{Existência do elemento inverso de $+$:} $(\forall a \in V): a+a^{-1}=a^{-1}+a=\Set{I}$
+            \item \textbf{Existência do elemento inverso de $+$:} $(\forall a \in V, \exists! a^{-1} \in V): a+a^{-1}=a^{-1}+a=\Set{I}$
 
+            \item \textbf{Associatividade de $.$:} $(\forall a \in V, \alpha, \beta \in K): \alpha(\beta.a) = (\alpha.\beta).a $
 
+            \item \textbf{Distributividade de $.$ em relação a $+$:} $(\forall a, b \in V, \alpha in K): \alpha.(a+b)=\alpha.a+\alpha.b$
+
+            \item \textbf{Distributividade de $.$ em relação a soma de escalares:} $(\forall a \in V, \alpha, \beta \in K): (\alpha+\beta).a=(\alpha.a)+(\beta.a)$
+
+            \item \textbf{Existência do elemento neutro de $.$:} $(\forall a \in V, \Set{I} \in K): \alpha.a=a$
         \end{enumerate}
     \end{defi}
+
+    A definição \ref{defi:espaco-vetorial} foi baseada em \cite{lima-2012}.
 \end{document}
